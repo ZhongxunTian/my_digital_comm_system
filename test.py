@@ -13,3 +13,8 @@ string = "Hello"
 ascii_values = [ord(char) for char in string]
 
 print(ascii_values)
+
+from utils.bit_error_rate import bit_error_rate
+tx_signal = np.array([1,0,1,0,0,1,1])
+rx_signal = np.array([1,0,0,0,1,1,1])
+print("BER = ", bit_error_rate(tx_signal,rx_signal))
